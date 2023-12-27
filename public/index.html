@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>Ecomansa</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+        body {
+            background: #2d3032;
+        }
+
+        .lm-btn {
+            background: #3b3b3b
+        }
+
+        .lm-btn a {
+            color: white
+        }
+        .lm-btn:hover + a {
+            color: #3b3b3b;
+        }
+
+        .lm-btn:hover {
+            background: #eea412;
+            color: #3b3b3b;
+        }
+
+        .logo-con img{
+            max-width: 4rem;
+        }
+
+        .icons-con {
+            display: flex;
+            align-items: center;
+        }
+
+        .icons-con1 {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+
+        .icons-con i,.icons-con1 i{
+            font-size: 12rem;
+            color: #eea412
+        }
+
+       @media screen and (max-width: 656px) {
+         .box-slider .carousel-control-prev,
+         .box-slider .carousel-control-next{
+            display: none;
+        }
+       }
+
+       .gallery {
+        width: 100%;
+        background: aliceblue;
+       }
+
+       .gallery h1 {
+        text-align: center;
+        font: 900;
+        font-size: 40px;
+        padding: 2rem;
+       }
+
+       .Gallery-container > div {
+        padding: .5rem;
+        width: 40%;
+       }
+
+       .Gallery-container > div img {
+        border-radius: 5px;
+        width: 100%;
+       }
+
+       .bc {
+          display: flex;
+          justify-content: center;
+          
+       }
+
+       .bc button {
+           outline: none;
+           background: #eea412;
+           border-radius: 25px;
+           border: none;
+        padding: 0.5rem 1rem;
+       }
+
+    </style>
+
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<div class="logo-con">
+                    <img src="./images/mansa-logo-removebg-preview.png" alt="">
+                </div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="views/about.html">About Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="views/contact.html">Contact</a></li>
+						<li class="nav-item btn"><a class="nav-link" href="views/login.html">Admin</a></li>
+					</ul>
+					
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="3000" >
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section" style="background-image:url('images/WhatsApp Image 2023-12-07 at 15.06.27.jpeg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2><strong>Ecomansa </strong> education College</h2>
+										<p class="lead">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. <p>
+											<a href="views/contact.html" class="hover-btn-new"><span>Contact Us</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="views/about.html" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/427805-847x440.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight">Ecomansa <strong>education school</strong></h2>
+										<p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>
+											<a href="views/contact.html" class="hover-btn-new"><span>Contact Us</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="views/about.html" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/slider-03.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>Ecomansa</strong> school of exellence</h2>
+										<p class="lead" data-animation="animated fadeInLeft">1 IP included with each server 
+											Your Choice of any OS (CentOS, Windows, Debian, Fedora)
+											FREE Reboots</p>
+											<a href="views/contact.html" class="hover-btn-new"><span>Contact Us</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="views/about.html" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<!-- Left Control -->
+			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>About</h3>
+                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center"
+            >
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"
+                style="box-shadow: 2px 2px 5px rgb(102, 102, 102);  border-radius: 5px;
+                height: 21rem">
+                <h1>Mission</h1>
+                   <div class="icons-con">
+                    <i class="flaticon-achievement"></i>
+                    <p>Providing representation, guidance and services to enhance students’ academic experiences and promote their interests.</p>
+                   </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>Welcome to SmartEDU education school</h2>
+                        <p>ECOMANSA is a student association, also known as a student organization, which is a group formed by students with common interests and goals. ECOMANSA is typically found at the University of The Gambia, in the School of Business and Public Administration. The purpose of ECOMANSA is to provide a platform for students to engage in activities related to their interests, develop new skills, foster social connections, and contribute to the overall student experience.</p>
+
+                       
+             <button class="hover-btn-new orange lm-btn" type="button">
+                 <a href="views/about.html"> Learn More</a>
+             </button>                    
+                </div><!-- end messagebox -->
+                </div><!-- end col -->
+			</div>
+
+			<div class="row align-items-center">
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>The standard</h2>
+                        <ul>
+                            <li>Firstly, the union (ECOMANSA) often organizes various academic events, workshops, and seminars that complement the curriculum and provide additional learning opportunities. These events can help students further develop their knowledge and skills in specific subjects of interest.</li>
+                            <li>Secondly, the union (ECOMANSA) often facilitates networking and mentorship programs, connecting students with professionals in their desired fields. This not only helps students gain valuable insights and guidance but also opens doors to potential internships, job opportunities, and industry connections.</li>
+                        </ul>
+                        <button class="hover-btn-new orange lm-btn" type="button">
+                            <a href="views/about.html"> Learn More</a>
+                        </button>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+<!-- <i class="flaticon-achievement"></i> -->
+               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"
+                style="box-shadow: 2px 2px 5px rgb(102, 102, 102); border-radius: 5px;
+                height: 21rem">
+                <h1>Vission</h1>
+                   <div class="icons-con1">
+                    <i class="flaticon-achievement"></i>
+                    <p>promoting knowledge, leadership, innovation, and patriotism for national development.
+To inspire and empower students to become lifelong learners, critical thinkers, and compassionate leaders who positively impact their communities and the world.</p>
+                   </div>
+                </div>
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <section class="section lb page-section" style="padding: 0;">
+		<div class="container">
+			 <div class="section-title row text-center">
+                <!-- <div class="col-md-8 offset-md-2">
+                    <h3>Upcoming events and activities</h3>
+                  
+                </div> -->
+            </div><!-- end title -->
+			<div class="timeline">
+				<div class="timeline__wrap">
+					<div class="timeline__items">
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>Jenuary 7, 2024</h2>
+                    
+								<ul style="background: white">
+                                    <li>Principal's Confrence</li>
+                                </ul>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>Febuary 8, 2024</h2>
+								<ul style="background: white">
+                                    <li>Principal's Confrence</li>
+                                </ul>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>Febuary 20, 2024</h2>
+								<ul style="background: white">
+                                    <li>Principal's Confrence</li>
+                                </ul>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>March 14, 2024</h2>
+								<ul style="background: white">
+                                    <li>Principal's Confrence</li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+		</div>
+        <div class="bc m-2">
+            <button>Show more</button>
+        </div>
+	</section>
+
+    <section class="gallery">
+        <h1>Our Gallery</h1>
+        <div class="Gallery-container border" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div>
+                <img src="images/WhatsApp Image 2023-12-07 at 15.06.27.jpeg" alt="">
+            </div>
+             <div>
+                <img src="images/427805-847x440.jpg" alt="">
+            </div>
+             <div>
+                <img src="images/427805-847x440.jpg" alt="">
+            </div>
+             <div>
+                <img src="images/25411866467_8d8077fdba_b.jpg" alt="">
+            </div>
+            <div class="bc">
+                <button>Show more</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>About US</h3>
+                        </div>
+                        <p> ECOMANSA celebrates cultural diversity and helps students explore different cultures and traditions. The union provides opportunities for students to engage in sports, arts, music, or other hobbies. </p>   
+						<div class="footer-right">
+							<ul class="footer-links-soi">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							</ul><!-- end links -->
+						</div>						
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Partnerships</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li>MOU</li>
+                            <li>GOMINDZ Inc.</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">ecomansa@gmail.com</a></li>
+                            <li><a href="#">www.ecomansa.com</a></li>
+                            <li>Faraba, The Gambia</li>
+                            <li>+220 1234567</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">                   
+                    <p class="footer-company-name">&copy;Gomindz Inc.</p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>
