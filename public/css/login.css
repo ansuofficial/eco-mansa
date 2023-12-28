@@ -7,6 +7,11 @@
 	font-family: Raleway, sans-serif;
 }
 
+body {
+	height: 100vh;
+	overflow: hidden;
+}
+
 .container {
 	margin: 2rem auto;
 	display: flex;

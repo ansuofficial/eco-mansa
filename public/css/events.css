@@ -1,0 +1,62 @@
+body {
+  background: #2d3032;
+}
+
+.logo-con img{
+    width: 4rem
+}
+
+.upcomming-events-title {
+    color: white;
+}
+
+.events {
+  color: white;
+  padding: 2rem;
+}
+
+.event {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 916px) {
+    .event {
+        display: block;
+    }
+}
+
+.event img {
+  width: 100%;
+}
+
+.date {
+    background: teal;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 40%;
+    padding: .5rem;
+}
+
+.date h1, h3 {
+    font-weight: bold;  
+}
+
+@media screen and (max-width: 442px) {
+    .date h1, h3 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 328px) {
+    .date h1, h3 {
+        font-size: .9rem;
+    }
+}
+
+.event-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
