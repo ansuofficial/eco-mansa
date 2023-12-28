@@ -68,15 +68,35 @@
             align-items: center;
         }
 
+        .mvc {
+            border-radius: 5px;
+            height: 21rem;
+            transition: .3s ease;
+        }
+
+
+        @media screen and (max-width: 584px) {
+
+            .icons-con, .icons-con1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .vc {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+
         .icons-con1 {
             display: flex;
             align-items: center;
             flex-direction: row-reverse;
         }
 
-        .icons-con i,.icons-con1 i{
-            font-size: 12rem;
-            color: #eea412
+        .icons-con img,.icons-con1 img{
+            width: 100%;
         }
 
        @media screen and (max-width: 656px) {
@@ -84,6 +104,11 @@
          .box-slider .carousel-control-next{
             display: none;
         }
+       }
+
+       .message-box{
+        height: 100%;
+        box-shadow: 1px 1px 2px 5px solid #eea412;
        }
 
        .gallery {
@@ -252,56 +277,35 @@
             <div class="section-title row text-center">
                 <div class="col-md-8 offset-md-2">
                     <h3>About</h3>
-                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
                 </div>
             </div><!-- end title -->
         
-            <div class="row align-items-center">
-				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"
-                style="box-shadow: 2px 2px 5px rgb(102, 102, 102);  border-radius: 5px;
-                height: 21rem;">
-                <h1>Mission</h1>
-                   <div class="icons-con">
-                    <i class="flaticon-achievement"></i>
-                    <p>Providing representation, guidance and services to enhance students’ academic experiences and promote their interests.</p>
+            <div class="row ">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mvc">
+                <!-- <h1 class="text-center">Mission</h1> -->
+                   <div class="icons-con d-flex justify-content-center">
+                   <img src="https://www.strategy-business.com/media/image/44639082_thumb6_1180x670.jpg" alt="Missiom">
                    </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
-                        <h2>Welcome to Ecomansa education school</h2>
-                        <p>ECOMANSA is a student association, also known as a student organization, which is a group formed by students with common interests and goals. ECOMANSA is typically found at the University of The Gambia, in the School of Business and Public Administration. The purpose of ECOMANSA is to provide a platform for students to engage in activities related to their interests, develop new skills, foster social connections, and contribute to the overall student experience.</p>
-
-                       
-             <button class="hover-btn-new orange lm-btn" type="button">
-                 <a href="views/about.html"> Learn More</a>
-             </button>                    
+                        <p>Providing representation, guidance and services to enhance students’ academic experiences and promote their interests.</p>      
                 </div><!-- end messagebox -->
                 </div><!-- end col -->
 			</div>
 
-			<div class="row align-items-center">
+			<div class="row vc">
 				
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="message-box">
-                        <h2>The standard</h2>
-                        <ul>
-                            <li>Firstly, the union (ECOMANSA) often organizes various academic events, workshops, and seminars that complement the curriculum and provide additional learning opportunities. These events can help students further develop their knowledge and skills in specific subjects of interest.</li>
-                            <li>Secondly, the union (ECOMANSA) often facilitates networking and mentorship programs, connecting students with professionals in their desired fields. This not only helps students gain valuable insights and guidance but also opens doors to potential internships, job opportunities, and industry connections.</li>
-                        </ul>
-                        <button class="hover-btn-new orange lm-btn" type="button">
-                            <a href="views/about.html"> Learn More</a>
-                        </button>
+                        <p>Promoting knowledge, leadership, innovation, and patriotism for national development. To inspire and empower students to become lifelong learners, critical thinkers, and compassionate leaders who positively impact their communities and the world.</p>
                     </div><!-- end messagebox -->
                 </div><!-- end col -->
 <!-- <i class="flaticon-achievement"></i> -->
-               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"
-                style="box-shadow: 2px 2px 5px rgb(102, 102, 102); border-radius: 5px;
-                height: 21rem">
-                <h1>Vission</h1>
-                   <div class="icons-con1">
-                    <i class="flaticon-achievement"></i>
-                    <p>promoting knowledge, leadership, innovation, and patriotism for national development.
-To inspire and empower students to become lifelong learners, critical thinkers, and compassionate leaders who positively impact their communities and the world.</p>
+               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mvc">
+                <!-- <h1 class="text-center">Vision</h1> -->
+                   <div class="icons-con1 d-flex justify-content-center">
+                    <img src="https://www.viraj.com/wp-content/uploads/2021/11/vision-1.jpg" alt="Vission">
                    </div>
                 </div>
 				
@@ -309,55 +313,14 @@ To inspire and empower students to become lifelong learners, critical thinkers, 
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <section class="section lb page-section" style="padding: 0;">
+    <section class="section lb" style="padding: 0;">
 		<div class="container">
 			 <div class="section-title row text-center">
-               
-            </div><!-- end title -->
-			<div class="timeline">
-				<div class="timeline__wrap">
-					<div class="timeline__items">
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-01">
-								<h2>Jenuary 7, 2024</h2>
-                    
-								<ul style="background: white">
-                                    <li>Principal's Confrence</li>
-                                </ul>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-02">
-								<h2>Febuary 8, 2024</h2>
-								<ul style="background: white">
-                                    <li>Principal's Confrence</li>
-                                </ul>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-03">
-								<h2>Febuary 20, 2024</h2>
-								<ul style="background: white">
-                                    <li>Principal's Confrence</li>
-                                </ul>
-							</div>
-						</div>
-						<div class="timeline__item">
-							<div class="timeline__content img-bg-04">
-								<h2>March 14, 2024</h2>
-								<ul style="background: white">
-                                    <li>Principal's Confrence</li>
-                                </ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-            
+                 <div class="bc">
+                     <button><a href="./views/events.html">Upcoming events</a></button>
+                </div>
+                </div><!-- end title -->
 		</div>
-        <div class="bc m-2">
-            <button><a href="./views/events.html">Show more</a></button>
-        </div>
 	</section>
 
     <section class="gallery">
@@ -376,7 +339,7 @@ To inspire and empower students to become lifelong learners, critical thinkers, 
                 <img src="images/25411866467_8d8077fdba_b.jpg" alt="">
             </div>
             <div class="bc">
-                <button>Show more</button>
+                <button><a href="./views/gallery.html">Show more</a></button>
             </div>
         </div>
     </section>
