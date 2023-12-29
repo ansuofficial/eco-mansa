@@ -1,0 +1,10 @@
+.table-title-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-user {
+  padding: 0 1rem;
+  margin-top: 8rem;
+}
