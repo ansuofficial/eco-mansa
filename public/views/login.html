@@ -28,16 +28,6 @@
     <link rel="stylesheet" href="../css/custom.css" />
     <link rel="stylesheet" href="../css/login.css" />
 
-    <style>
-      .top-navbar .navbar-light .navbar-nav .nav-link {
-        font-weight: bold;
-      }
-
-      .logo-con img {
-        width: 4rem;
-      }
-    </style>
-
     <!-- Modernizer for Portfolio -->
     <script src="../js/modernizer.js"></script>
   </head>
@@ -89,10 +79,6 @@
       </nav>
     </header>
     <!-- End header -->
-
-    <!-- <h2>Login to the portal</h2> -->
-
-    <!-- partial:index.partial.html -->
     <div class="container">
       <div class="screen">
         <div class="screen__content">
@@ -100,6 +86,7 @@
             <div class="login__field">
               <i class="login__icon fas fa-user"></i>
               <input
+                id="username"
                 type="text"
                 class="login__input"
                 placeholder="User name / Email"
@@ -108,17 +95,20 @@
             <div class="login__field">
               <i class="login__icon fas fa-lock"></i>
               <input
+                id="password"
                 type="password"
                 class="login__input"
                 placeholder="Password"
               />
             </div>
-            <button class="button login__submit">
+            <div class="error">
+              <p>Wrong usernameor password please try again</p>
+            </div>
+            <button id="login" class="button login__submit">
               <span class="button__text">Log In Now</span>
               <i class="button__icon fas fa-chevron-right"></i>
             </button>
           </form>
-        
         </div>
         <div class="screen__background">
           <span
@@ -136,19 +126,11 @@
         </div>
       </div>
     </div>
-    <!-- partial -->
-	<script src="../js/login.js"></script>
+
+    <!-- <div id="root" class="hide"></div> -->
+
+    <script src="../js/login.js"></script>
     <script src="../js/all.js"></script>
-    <!-- ALL PLUGINS -->
     <script src="../js/custom.js"></script>
-    <script src="../js/timeline.min.js"></script>
-    <script>
-      timeline(document.querySelectorAll(".timeline"), {
-        forceVerticalMode: 700,
-        mode: "horizontal",
-        verticalStartPosition: "left",
-        visibleItems: 4,
-      });
-    </script>
   </body>
 </html>
