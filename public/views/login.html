@@ -82,7 +82,7 @@
     <div class="container">
       <div class="screen">
         <div class="screen__content">
-          <form class="login">
+          <form class="login" action="http://127.0.0.1:3030/admin" method="post">
             <div class="login__field">
               <i class="login__icon fas fa-user"></i>
               <input
@@ -90,6 +90,7 @@
                 type="text"
                 class="login__input"
                 placeholder="User name / Email"
+                name="username"
               />
             </div>
             <div class="login__field">
@@ -99,12 +100,13 @@
                 type="password"
                 class="login__input"
                 placeholder="Password"
+                name="password"
               />
             </div>
             <div class="error">
-              <p>Wrong usernameor password please try again</p>
+              <p>Wrong username or password please try again</p>
             </div>
-            <button id="login" class="button login__submit">
+            <button type="submit" id="login" class="button login__submit">
               <span class="button__text">Log In Now</span>
               <i class="button__icon fas fa-chevron-right"></i>
             </button>
@@ -129,7 +131,7 @@
 
     <!-- <div id="root" class="hide"></div> -->
 
-    <script src="../js/login.js"></script>
+    <!-- <script src="../js/login.js"></script> -->
     <script src="../js/all.js"></script>
     <script src="../js/custom.js"></script>
   </body>
