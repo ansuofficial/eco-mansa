@@ -5,6 +5,65 @@
 }
 
 .new-user {
+  cursor: pointer;
   padding: 0 1rem;
   margin-top: 8rem;
 }
+/* FORM TO FILL */
+
+
+.title-con h3 {
+  padding: .5rem;
+}
+
+.title-con {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-to-fill {
+  cursor: pointer;
+}
+
+.to-fill-form {
+  display: none;
+  background: deepskyblue;
+  color: black;
+}
+
+.inputs-con {
+  box-shadow: 2px 5px 5px  #000000;
+  border-radius: 25px;
+  max-width: 700px;
+  margin: 0 auto;
+  display: none;
+  background: #212529;
+  color: white;
+  display: flex;
+  align-items: center;
+  /* border: 2px solid green; */
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+
+.inputs-con label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.inputs-con input {
+  border-radius: 10px;
+  border: 1px slategrey;
+  outline: none;
+  margin-bottom: 2rem;
+  padding: .5rem .75rem;
+}
+
+.actions {
+  display: flex;
+  gap: 4rem  ;
+}
+
+/* ALL TOGGGLES  */

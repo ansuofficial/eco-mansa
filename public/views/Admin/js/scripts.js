@@ -23,4 +23,34 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 
+
 });
+
+
+// Custom JavaScript 
+
+const toFill = document.querySelector(".to-fill-form");
+const newUser = document.querySelector(".new-user");
+const cancel = document.querySelector(".cancel");
+const firstName = document.querySelector("#first-name")
+const lastName = document.querySelector("#last-name");
+const matNumber = document.querySelector("#mat-number");
+const create = document.querySelector("#create");
+
+const toggleController = () => {
+    newUser.addEventListener("click", () => toFill.classList.toggle("to-fill-form"));
+    cancel.addEventListener("click", () => toFill.classList.add("to-fill-form"));
+}
+toggleController()
+
+const valueHandler = () => {
+    let user = []
+    create.addEventListener("click", () => {
+        user.push(firstName.value)
+        user.push(lastName.value);
+        user.push(matNumber.value);
+
+        console.log(user)
+    })
+}
+    valueHandler()

@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- Site Metas -->
+    <title>Ecomansa</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="../css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- Custom CSS -->
+
+    <!-- Modernizer for Portfolio -->
+    <script src="../js/modernizer.js"></script>
+
 </head>
 <body>
-    <h1>Hello Gallery</h1>
+    <header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<div class="logo-con">
+                    <img src="../images/mansa-logo-removebg-preview.png" alt="LOGO" style="width: 4rem;">
+                </div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="../index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="../views/about.html">About Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="../views/contact.html">Contact</a></li>
+						<li class="nav-item btn"><a class="nav-link" href="../views/login.html">Admin</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+    <main>
+        <section>
+           <div class="gallery-container">
+            <div class="gallery-content">
+                <div>
+                    <h1 class="gallery-title">Our Gallery</h1>
+                </div>
+
+                <div class="gallery-img-con">
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                   
+                </div>
+                
+                <div class="gallery-img-con">
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                   
+                </div>
+
+                <div class="gallery-img-con">
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                   
+                </div>
+
+                <div class="gallery-img-con">
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div>
+                        <img src="../images/25411866467_8d8077fdba_b.jpg" alt="">
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                   
+                </div>
+
+            </div>
+           </div>
+        </section>
+    </main>
+
+     <script src="../js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="../js/custom.js"></script>
+	<script src="../js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
 </body>
 </html>

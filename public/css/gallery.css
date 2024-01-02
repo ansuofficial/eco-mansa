@@ -1,0 +1,26 @@
+.gallery-container {
+    padding: 2rem;
+}
+
+.gallery-title {
+    padding: 1rem 0;
+    font-size: 36px;
+}
+
+.gallery-img-con img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.gallery-img-con img:hover {
+    box-shadow: 2px 2px 5px rgb(47, 47, 54);
+    scale: 1.01;
+    transition: .2s ease-in-out;
+}
+
+.gallery-img-con {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 2rem;
+}
+
