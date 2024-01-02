@@ -1,29 +1,21 @@
-const person = [
-  {
-    name: "Ansu",
-    role: "Admin",
-    password: 123,
-  },
-];
+async function submitForm() {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
 
-const userName = document.querySelector("#username");
-const psw = document.querySelector("#password");
-const login = document.querySelector("#login");
-const err = document.querySelector(".error");
-
-const handleLogin = () => {
-  login.addEventListener("click", (e) => {
-  
-  e.preventDefault();
-
-    const auth = person.find((user) => {
-      user.name == userName.value && user.password == psw.value
-        ? null
-        : err.classList.remove(`error`),
-        (psw.value = "");
-    });
+  const response = await fetch('/admin', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
   });
 
-};
-
-handleLogin();
+  if (response.ok) {
+      // Successful login
+      window.location.href = '/admin'; // Redirect to the admin page
+  } else {
+      // Display error message
+      const errorMessage = await response.text();
+      document.getElementById('error-message').innerText = errorMessage;
+  }
+}
