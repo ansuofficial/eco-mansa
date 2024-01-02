@@ -24,3 +24,12 @@
     gap: 2rem;
 }
 
+@media screen and (max-width: 900px) {
+    .gallery-img-con {
+        /* align-items: center; */
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+    }
+}
+

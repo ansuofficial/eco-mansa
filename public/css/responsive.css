@@ -96,6 +96,13 @@
 		margin-bottom: 30px;
 	}
 }
+@media  screen and (max-width: 990px) {
+	.abt1 {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	
+}
 @media (max-width: 767px) {
 	.top-navbar .navbar-light .navbar-nav .nav-item{
 		padding: 0px;

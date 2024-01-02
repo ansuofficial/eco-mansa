@@ -34,10 +34,12 @@ const cancel = document.querySelector(".cancel");
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 const matNumber = document.querySelector("#mat-number");
+const email = document.querySelector("#email");
 const create = document.querySelector("#create");
 const select = document.querySelector("#select");
 const address = document.querySelector("#address");
 const date = document.querySelector("#date");
+const tbody = document.querySelector("#tbody");
 
 console.log(select.value);
 
@@ -53,16 +55,28 @@ const valueHandler = () => {
   let user = [];
   create.addEventListener("click", () => {
     user.push(firstName.value);
-    user.push(lastName.value);
     user.push(matNumber.value);
     user.push(select.value);
     user.push(address.value);
     user.push(date.value);
-    for (let u of user) console.error(`this is wrong you stupid boy`)
+    user.push(email.value)
+    
+    let html = `
+                <tr>
+                  <td>${firstName.value}</td>
+                  <td>${email.value}</td>
+                  <td>${address.value}</td>
+                  <td>${matNumber.value}</td>
+                  <td>${date.value}</td>
+                  <td>${select.value}</td>
+                </tr>
+                <tr>
+    `
+    tbody.insertAdjacentHTML("afterbegin", html)
+
   });
 
   return user;
-//   user.forEach( (u) => console.log(`This ${u}`))
 };
 
 console.log(valueHandler());
