@@ -2,14 +2,13 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const root = require("./routes/root")
+const studentRoute = require("./routes/studentRoute")
 const adminRoute = require("./routes/adminRoute")
 const aboutRoute = require("./routes/aboutRoute")
 const galleryRoute = require("./routes/galleryRoute")
 const contactRoute = require("./routes/contactRoute")
 const eventRoute = require("./routes/eventRoute");
-const logoutRoute = require("./routes/logoutRoute")
 const cookieParser = require("cookie-parser");
-const verifyJWT = require("./middleware/verifyJWT")
 
 // built-in middleware to handle urlencoded form data
 app.use(express.urlencoded({ extended: false }));
@@ -30,7 +29,13 @@ app.use("/events", eventRoute);
 app.use("/gallery",galleryRoute);
 app.use("/contact", contactRoute);
 app.use("/admin", adminRoute);
-app.use("/logout", logoutRoute);
+app.use("/students", studentRoute);
+
+app.all("*", (req,res)=>{
+    res.status(404).send(
+        "<h1> 404, Page not found</h1>"
+    );
+})
 
 
 
