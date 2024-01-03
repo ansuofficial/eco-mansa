@@ -36,18 +36,16 @@
 
 .inputs-con {
   align-items: center;
-  box-shadow: 2px 5px 5px  #000000;
+  box-shadow: 2px 2px 5px  rgb(57, 57, 59);
   border-radius: 25px;
   max-width: 700px;
   margin: 0 auto;
   display: none;
-  background: #212529;
   color: white;
   display: flex;
   align-items: center;
   gap: 0 2rem;
-  /* border: 2px solid green; */
-  /* flex-direction: column; */
+  /* height: 70vh; */
   justify-content: center;
   padding: 1.5rem 0;
 }
@@ -61,12 +59,22 @@
   margin-bottom: 2rem;
 }
 
+.table-data {
+  text-align: left;
+}
+
 .inputs-con input {
   border-radius: 10px;
-  border: 1px slategrey;
+  /* border: 1px black; */
   outline: none;
   margin-bottom: 2rem;
   padding: .5rem .75rem;
+}
+
+.action-con {
+  width: 100%;
+  margin-top: -3.5rem;
+  padding: 1rem;
 }
 
 .actions {
@@ -74,6 +82,13 @@
   display: flex;
   gap:0 4rem  ;
   justify-content: center;
+}
+
+.actions input {
+  background: #0d6efd;
+  border: 1px slategrey;
+  border-radius: 5px;
+  outline: none;
 }
 
 /* ALL TOGGGLES  */

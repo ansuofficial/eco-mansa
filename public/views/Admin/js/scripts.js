@@ -1,20 +1,6 @@
-/*!
- * Start Bootstrap - SB Admin v7.0.7 (https://startbootstrap.com/template/sb-admin)
- * Copyright 2013-2023 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
- */
-//
-// Scripts
-//
-
 window.addEventListener("DOMContentLoaded", (event) => {
-  // Toggle the side navigation
   const sidebarToggle = document.body.querySelector("#sidebarToggle");
   if (sidebarToggle) {
-    // Uncomment Below to persist sidebar toggle between refreshes
-    // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-    //     document.body.classList.toggle('sb-sidenav-toggled');
-    // }
     sidebarToggle.addEventListener("click", (event) => {
       event.preventDefault();
       document.body.classList.toggle("sb-sidenav-toggled");
@@ -50,33 +36,57 @@ const toggleController = () => {
   cancel.addEventListener("click", () => toFill.classList.add("to-fill-form"));
 };
 toggleController();
+// Initialize user array
+let user = [];
 
 const valueHandler = () => {
-  let user = [];
   create.addEventListener("click", () => {
-    user.push(firstName.value);
-    user.push(matNumber.value);
-    user.push(select.value);
-    user.push(address.value);
-    user.push(date.value);
-    user.push(email.value)
-    
-    let html = `
-                <tr>
-                  <td>${firstName.value}</td>
-                  <td>${email.value}</td>
-                  <td>${address.value}</td>
-                  <td>${matNumber.value}</td>
-                  <td>${date.value}</td>
-                  <td>${select.value}</td>
-                </tr>
-                <tr>
-    `
-    tbody.insertAdjacentHTML("afterbegin", html)
+    // Retrieve existing data from local storage
+    let storedData = JSON.parse(localStorage.getItem("user-copy")) || [];
 
+    if (firstName.value.length > 0 && matNumber.value.length > 0 && address.value.length > 0 && date.value.length > 0 && email.value.length > 0) {
+      // Add the new user data to the user array
+      user.push({
+        firstName: firstName.value,
+        matNumber: matNumber.value,
+        select: select.value,
+        address: address.value,
+        date: date.value,
+        email: email.value
+      });
+
+      // Push the user data to the stored data
+      storedData.push(...user);
+
+      // Store the updated data back to local storage
+      localStorage.setItem("user-copy", JSON.stringify(storedData));
+
+      let html = `
+        <tr class="table-data">
+          <td>${firstName.value}</td>
+          <td>${email.value}</td>
+          <td>${address.value}</td>
+          <td>${matNumber.value}</td>
+          <td>${date.value}</td>
+          <td>${select.value}</td>
+        </tr>
+        <tr>
+      `;
+      tbody.insertAdjacentHTML("afterbegin", html);
+
+      // Clear the user array after storing the data
+      user = [];
+
+      firstName.value = "";
+      matNumber.value = "";
+      address.value = "";
+      date.value = "";
+      email.value = "";
+    } else {
+      alert("Please fill all inputs");
+    }
   });
-
-  return user;
 };
 
-console.log(valueHandler());
+// Call the function to set up the event listener
+valueHandler();
