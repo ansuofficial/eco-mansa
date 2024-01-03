@@ -1,24 +1,31 @@
-const path = require('path');
+const userModel = require('../model/UserModel');
 
-const usersDB = {
-    users: require('../model/users.json'), // Assuming you have a users.json file with user data
-    setUsers: function (data) { this.users = data }
-}
 
 exports.handleLogin = async (req, res) => {
-    const enteredUsername = req.body.username;
-    const enteredPassword = req.body.password;
+  const { username, password } = req.body;
 
-    // Check if the entered credentials are valid
-    const foundUser = usersDB.users.find(user => {
-        return user.username === enteredUsername && user.password === enteredPassword;
-    });
+  // Check if the entered credentials are valid
+  const foundUser = userModel.findByCredentials(username, password);
 
-    if (foundUser) {
-        // Successful login
-        return res.sendFile(path.join(__dirname, '..', 'public', 'views', 'Admin', 'admin.html'));
-    } else {
-        // Incorrect credentials
-        return res.status(401).send('Incorrect credentials. Please try again.');
-    }
+  if (foundUser) {
+    // Successful login
+    req.session.user = foundUser; // Store user information in the session
+    res.redirect('/admin');
+  } else {
+    // Incorrect credentials
+    res.status(401).send('Incorrect credentials. Please try again.');
+  }
 };
+
+exports.handleLogout=(req, res) => {
+  // Clear the user's session on logout
+  req.session.destroy(err => {
+    if (err) {
+      console.error('Error destroying session:', err);
+      res.status(500).send('Internal Server Error');
+    } else {
+      res.redirect('/login'); // Redirect to the login page after logout
+    }
+  })
+}
+
