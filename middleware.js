@@ -20,6 +20,9 @@ app.use(session({
     secret: 'your-secret-key',
     resave: false,
     saveUninitialized: true,
+    cookie: {
+        maxAge: 60 * 60 * 1000, // Set the maximum age of the cookie in milliseconds (1 hour in this example)
+      },
   }));
 
 //middleware for cookies

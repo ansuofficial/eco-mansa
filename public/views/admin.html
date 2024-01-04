@@ -10,6 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/admin.css">
+        <link rel="stylesheet" href="css/tables.css">
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -78,8 +79,74 @@
                             </div>
                         </div>
                         
-                    </div>
+                    </div>                        
                     <div class="container-fluid px-4">
+                        <div class="table-title-con">
+                            <h1 class="mt-4">Tables</h1>
+                            <h1 class="new-user">+</h1>
+                          </div>
+                          <div class="to-fill">
+                            <div>
+                              <form class="to-fill-form">
+                                <div>
+                                  <div class="title-con">
+                                    <div>
+                                      <h3>Add new student</h3>
+                                    </div>
+                                    <!-- <div class="close-to-fill"><h3>+</h3></div> -->
+                                  </div>
+                                  <div class="ic">
+                                   <div class="inputs-con">
+                                     <div>
+                                    <div>
+                                      <label for="First name">Full name</label>
+                                      <input required id="first-name" type="text" placeholder="first name" />
+                                    </div>
+                                    <div>
+                                      <label for="Last name">Email</label>
+                                      <input required id="email" type="email" placeholder="email@example.com" />
+                                    </div>
+                                    <div>
+                                      <label for="Mat-number">Mat-number</label>
+                                      <input required id="mat-number" type="text" placeholder="mat-number" />
+                                    </div>
+                                    
+                                    </div>
+                                    <div class="inputs-con0">
+                                      <div>
+                                      <label for="First name">Address</label>
+                                      <input required id="address" type="text" placeholder="address" />
+                                    </div>
+                                    <div>
+                                      <label for="Last name">Date</label>
+                                      <input required id="date" type="date" placeholder="date" />
+                                    </div>
+                                    <div>
+                                      <label>Status</label>
+                                      <select name="select" id="select" class="tf-sel">
+                                        <option value="Pending">Pending</option>
+                                        <option value="Completed">Completed</option>
+                                        <option value="Not paid">Not paid</option>
+                                      </select>
+                                    </div>
+                                    </div>
+                                   </div>
+                                  
+                                    <div class="action-con">
+                                      <div class="actions">
+                                      <div>
+                                        <input id="create" type="submit" value="Create" />
+                                      </div>
+                                      <div>
+                                        <input class="cancel" type="button" value="Cancel" />
+                                      </div>
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
                         <h1 class="mt-4">Dashboard</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
