@@ -49,27 +49,45 @@ const valueHandler = () => {
 }
     valueHandler()
 
-// Frontend JavaScript code
 
-// async function logout() {
-//     try {
-//       const response = await fetch('/logout', {
-//         method: 'POST',
-//       });
-  
-//       if (response.ok) {
-//         // Successful logout
-//         window.location.href = '/login'; // Redirect to the login page
-//       } else {
-//         // Display error message
-//         const errorMessage = await response.text();
-//         console.error('Logout error:', errorMessage);
-//       }
-//     } catch (error) {
-//       console.error('Error during logout:', error);
-//     }
-//   }
-  
-//   // Attach the logout function to the logout button click event
-//   document.getElementById('logout-button').addEventListener('click', logout);
-  
+    // Add to students
+      const submitButton = document.getElementById('submitButton');
+      const myForm = document.getElementById('myForm');
+
+      if (submitButton && myForm) {
+          submitButton.addEventListener('click', async () => {
+              try {
+                  const formData = new FormData(myForm);
+                  const formDataObject = {};
+                  formData.forEach((value, key) => {
+                      formDataObject[key] = value;
+                  });
+
+                  await submitDataToApi('/your-api-endpoint', formDataObject);
+              } catch (error) {
+                  console.error('Error submitting data:', error);
+              }
+          });
+      }
+
+
+  async function submitDataToApi(apiEndpoint, data) {
+      try {
+          const response = await fetch(apiEndpoint, {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+          });
+
+          if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+
+          const responseData = await response.json();
+          console.log('Data submitted successfully:', responseData);
+      } catch (error) {
+          throw new Error(`Error submitting data: ${error.message}`);
+      }
+  }
