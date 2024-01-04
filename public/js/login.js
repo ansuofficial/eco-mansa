@@ -1,27 +1,26 @@
-const person = [
-  {
-    name: "Ansu",
-    role: "Admin",
-    password: 123,
-  },
-];
+async function submitForm() {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
 
-const userName = document.querySelector("#username");
-const psw = document.querySelector("#password");
-const login = document.querySelector("#login");
-const err = document.querySelector(".error");
-
-const handleLogin = () => {
-  login.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const auth = person.find((user) => {
-      user.name == userName.value && user.password == psw.value
-        ? (window.location.href = "http://localhost:3030/admin")
-        : err.classList.remove(`error`),
-        (psw.value = "");
-    });
+  const response = await fetch('/admin/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ username, password }),
   });
-};
 
-handleLogin();
+  if (response.ok) {
+    // Successful login
+    window.location.href = '/admin'; // Redirect to the admin page
+
+    // If you need to perform actions after the redirection, you can do so here
+    // For example, you may want to fetch additional data or initialize some functionality
+    // ...
+
+  } else {
+    // Display error message
+    const errorMessage = await response.text();
+    document.getElementById('error-message').innerText = errorMessage;
+  }
+}

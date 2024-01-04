@@ -1,0 +1,8 @@
+[
+    {
+        "username":"admin@ecomansa.gm",
+        "roles":{"User":2001,"Staff":1984,"Admin":5150},
+        "password":"admin",
+        "refreshToken":""
+    }
+]

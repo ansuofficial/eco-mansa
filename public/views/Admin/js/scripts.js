@@ -44,49 +44,32 @@ const valueHandler = () => {
     // Retrieve existing data from local storage
     let storedData = JSON.parse(localStorage.getItem("user-copy")) || [];
 
-    if (firstName.value.length > 0 && matNumber.value.length > 0 && address.value.length > 0 && date.value.length > 0 && email.value.length > 0) {
-      // Add the new user data to the user array
-      user.push({
-        firstName: firstName.value,
-        matNumber: matNumber.value,
-        select: select.value,
-        address: address.value,
-        date: date.value,
-        email: email.value
-      });
+        console.log(user)
+    })
+}
+    valueHandler()
 
-      // Push the user data to the stored data
-      storedData.push(...user);
+// Frontend JavaScript code
 
-      // Store the updated data back to local storage
-      localStorage.setItem("user-copy", JSON.stringify(storedData));
-
-      let html = `
-        <tr class="table-data">
-          <td>${firstName.value}</td>
-          <td>${email.value}</td>
-          <td>${address.value}</td>
-          <td>${matNumber.value}</td>
-          <td>${date.value}</td>
-          <td>${select.value}</td>
-        </tr>
-        <tr>
-      `;
-      tbody.insertAdjacentHTML("afterbegin", html);
-
-      // Clear the user array after storing the data
-      user = [];
-
-      firstName.value = "";
-      matNumber.value = "";
-      address.value = "";
-      date.value = "";
-      email.value = "";
-    } else {
-      alert("Please fill all inputs");
-    }
-  });
-};
-
-// Call the function to set up the event listener
-valueHandler();
+// async function logout() {
+//     try {
+//       const response = await fetch('/logout', {
+//         method: 'POST',
+//       });
+  
+//       if (response.ok) {
+//         // Successful logout
+//         window.location.href = '/login'; // Redirect to the login page
+//       } else {
+//         // Display error message
+//         const errorMessage = await response.text();
+//         console.error('Logout error:', errorMessage);
+//       }
+//     } catch (error) {
+//       console.error('Error during logout:', error);
+//     }
+//   }
+  
+//   // Attach the logout function to the logout button click event
+//   document.getElementById('logout-button').addEventListener('click', logout);
+  

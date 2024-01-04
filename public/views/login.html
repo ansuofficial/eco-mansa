@@ -31,7 +31,7 @@
     <!-- Modernizer for Portfolio -->
     <script src="../js/modernizer.js"></script>
   </head>
-  <body class="host_version">
+  <body class="host_version" id="main-container">
     <div id="preloader">
       <div class="loader-container">
         <div class="progress-br float shadow">
@@ -82,7 +82,7 @@
     <div class="container">
       <div class="screen">
         <div class="screen__content">
-          <form class="login">
+          <form class="login" action="" method="post" id="loginForm">
             <div class="login__field">
               <i class="login__icon fas fa-user"></i>
               <input
@@ -90,6 +90,8 @@
                 type="text"
                 class="login__input"
                 placeholder="User name / Email"
+                name="username"
+                required
               />
             </div>
             <div class="login__field">
@@ -99,12 +101,16 @@
                 type="password"
                 class="login__input"
                 placeholder="Password"
+                name="password"
+                required
               />
             </div>
+            <p id="error-message" class="error-message"></p>
+
             <div class="error">
-              <p>Wrong usernameor password please try again</p>
+              <p>Wrong username or password please try again</p>
             </div>
-            <button id="login" class="button login__submit">
+            <button type="button" onclick="submitForm()" class="button login__submit">
               <span class="button__text">Log In Now</span>
               <i class="button__icon fas fa-chevron-right"></i>
             </button>
