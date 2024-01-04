@@ -28,14 +28,13 @@ app.use(cookieParser())
 // app.use(cors())
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "public", "views", "Admin", )));
-app.use(express.static(path.join(__dirname, "public", "views", "Admin", )));
 
 app.use("^/$|/index(.html)?", root);
 app.use("/about", aboutRoute);
 app.use("/events", eventRoute);
 app.use("/gallery",galleryRoute);
 app.use("/contact", contactRoute);
-app.use("/admin(.html)?", adminRoute);
+app.use("/admin", adminRoute);
 app.use("/students", studentRoute);
 app.use("/login", (req, res)=>{
     res.sendFile(path.join(__dirname, "public" ,'views' , "login.html"))

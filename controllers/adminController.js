@@ -6,7 +6,7 @@ exports.renderAdminPage= (req, res) => {
   // Check if the user is authenticated
   if (req.session.user) {
     // User is authenticated, render the admin.html page
-    const adminHtmlPath = path.join(__dirname, '..', 'public', 'views', 'Admin', 'admin.html');
+    const adminHtmlPath = path.join(__dirname, '..', 'public', 'views', 'admin.html');
     fs.readFile(adminHtmlPath, 'utf-8')
       .then(adminHtmlContent => {
         res.status(200).send(adminHtmlContent);
