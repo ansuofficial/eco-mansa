@@ -1,2 +1,47 @@
+.team {
+    padding: 4rem;
+}
 
-/** ADD YOUR AWESOME CODES HERE **/
+.team-content > div h1 {
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.scroller {
+    max-width: 100%;
+}
+
+.scroller[data-animated ="true"] {
+    overflow: hidden;
+}
+
+.scroller[data-animated ="true"] .inner-scroller {
+    animation: scroll 40s linear infinite;
+    flex-wrap: nowrap;
+    width: max-content;
+}
+
+.inner-scroller {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1.5rem;  
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+.person-description-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4c5a7d;
+    padding: 2rem;
+}
+
+.team-role, .team-fullname, .team-major {
+    color: #fff;
+}
