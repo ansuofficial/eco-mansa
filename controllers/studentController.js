@@ -51,12 +51,12 @@ const createNewStudent = async (req, res) => {
     if (req.session.user) {
         const newStudent = {
             id: data.students.length ? data.students[data.students.length - 1].id + 1 : 1,
-            firstname: req.body.firstname,
-            lastname: req.body.lastname
+            name: req.body.name,
+            matNo: req.body.matNo
         };
 
-        if (!newStudent.firstname || !newStudent.lastname) {
-            return res.status(400).json({ 'message': 'First and last names are required.' });
+        if (!newStudent.name || !newStudent.matNo) {
+            return res.status(400).json({ 'message': 'Name and MatNo are required.' });
         }
 
         data.setStudents([...data.students, newStudent]);

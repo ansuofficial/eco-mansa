@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', async (event) => {
     const datatablesSimple = document.getElementById('datatablesSimple');
+    
 
     if (!datatablesSimple) {
         console.error("Error: Unable to find the DataTable element.");
@@ -11,7 +12,8 @@ window.addEventListener('DOMContentLoaded', async (event) => {
     const populateTable = async () => {
         try {
             const data = await getStudentData("/students");
-
+            document.getElementById('numStudents').textContent = await getNumStudents(data)
+            document.getElementById('amountGenerated').textContent = await getTotalAmount(data)
             if (!Array.isArray(data) || data.length === 0) {
                 console.error("Error: Invalid or empty data received.");
                 return;
@@ -50,6 +52,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
     // Add event listener to refresh the table when needed
     document.getElementById('refreshButton').addEventListener('click', populateTable);
+
 });
 
 // Function to fetch student data from an API
@@ -69,4 +72,19 @@ async function getStudentData(url) {
     } catch (error) {
         throw new Error(`Error fetching data: ${error.message}`);
     }
+}
+
+async function getNumStudents (data){
+    return data.length 
+}
+async function getTotalAmount (data){
+    let total_amount=0;
+    data.forEach(element=>{
+        total_amount+=element.amount
+        
+    })
+    return total_amount
+}
+async function getTotalOwings (){
+
 }
