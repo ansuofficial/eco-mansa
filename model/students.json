@@ -22,5 +22,17 @@
     "gender" : "Male",
     "intake" : "Year 2 First Semester", 
     "status" : "Fully Paid"
+  },
+  {
+    "id": 3,
+    "fullname" : "Ansu Badjie",
+    "matNo" : 3111, 
+    "contact": 3338111,
+    "major" : "Developer", 
+    "amount" : 5000, 
+    "date" : "2024-01-01", 
+    "gender" : "Male",
+    "intake" : "Year 3 First Semester", 
+    "status" : "Fully Paid"
   }
 ]

@@ -78,23 +78,42 @@
                                 <h1>+700</h1>
                             </div>
                         </div>
+                        <div>
+                            <div>
+                                <h4>Registered Student</h4>
+                            </div>
+                            <div>
+                                <i class="fas fa-profile me-1"></i>
+                            </div>
+                            <div>
+                                <h1>+700</h1>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h4>Registered Student</h4>
+                            </div>
+                            <div>
+                                <i class="fas fa-profile me-1"></i>
+                            </div>
+                            <div>
+                                <h1>+700</h1>
+                            </div>
+                        </div>
                         
                     </div>                        
                     <div class="container-fluid px-4">
+                          
                         <div class="table-title-con">
-                            <h1 class="mt-4">Tables</h1>
-                            <h1 class="new-user">+</h1>
+                          <h1 class="mt-4">Dashboard</h1>
+                          <div class="new-user">
+                            <i class="fas fa-user"></i>&nbsp; Add new user
                           </div>
-                          <div class="to-fill">
+                        </div>
+                        <div class="to-fill">
                             <div>
                               <form class="to-fill-form">
                                 <div>
-                                  <div class="title-con">
-                                    <div>
-                                      <h3>Add new student</h3>
-                                    </div>
-                                    <!-- <div class="close-to-fill"><h3>+</h3></div> -->
-                                  </div>
                                   <div class="ic">
                                    <div class="inputs-con">
                                      <div>
@@ -132,24 +151,26 @@
                                     </div>
                                    </div>
                                   
-                                    <div class="action-con">
-                                      <div class="actions">
+                                  <div class="action-con">
+                                    <div class="actions">
                                       <div>
                                         <input id="create" type="submit" value="Create" />
                                       </div>
                                       <div>
                                         <input class="cancel" type="button" value="Cancel" />
                                       </div>
-                                    </div>
-                                    </div>
+                                     </div>
+                                  </div>
                                   </div>
                                 </div>
                               </form>
                             </div>
                           </div>
-                        <h1 class="mt-4">Dashboard</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                        <ol class="breadcrumb mb-4 rad">
+                            <li class="breadcrumb-item active ">Dashboard</li>
+                            <div id="refreshButton">
+                            <i class="fas fa-sync"></i>
+                          </div>  
                         </ol>
 
                         <div class="card mb-4">
@@ -160,6 +181,17 @@
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
+                                        <tr>
+                                          <th>Name</th>
+                                          <th>Mat Number</th>
+                                          <th>Contact </th>
+                                          <th>Major</th>
+                                          <th>Amount</th>
+                                          <th>Date</th>
+                                          <th>Gender</th>
+                                          <th>Intake</th>
+                                          <th>Status</th>
+                                      </tr>
                                     </thead>
                                     <tbody class="studentList">
                                         
@@ -191,14 +223,5 @@
         <script src="js/datatables-simple-demo.js"></script>
     </body>
 </html>
-                                      <tr>
-                                          <th>Name</th>
-                                          <th>Mat Number</th>
-                                          <th>Contact </th>
-                                          <th>Major</th>
-                                          <th>Amount</th>
-                                          <th>Date</th>
-                                          <th>Gender</th>
-                                          <th>Intake</th>
-                                          <th>Status</th>
-                                      </tr>
+
+                                      
