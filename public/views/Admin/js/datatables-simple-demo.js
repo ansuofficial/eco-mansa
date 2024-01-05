@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
             // Populate the table with new data
             data.forEach((element) => {
                 const row = document.createElement("tr");
-                const columns = ["fullname", "email", "matNo", "amount", "lastPayment", "status"];
+                const columns = ["fullname", "matNo", "contact", "major", "amount", "date", "gender","intake", "status"];
                 columns.forEach((column) => {
                     const cell = document.createElement("td");
                     cell.textContent = element[column];

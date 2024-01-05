@@ -7,7 +7,7 @@ const studentRoute = require("./routes/studentRoute")
 const adminRoute = require("./routes/adminRoute")
 const aboutRoute = require("./routes/aboutRoute")
 const galleryRoute = require("./routes/galleryRoute")
-const contactRoute = require("./routes/contactRoute")
+const storiesRoute = require("./routes/storiesRoute")
 const eventRoute = require("./routes/eventRoute");
 const cookieParser = require("cookie-parser");
 
@@ -36,7 +36,7 @@ app.use("^/$|/index(.html)?", root);
 app.use("/about", aboutRoute);
 app.use("/events", eventRoute);
 app.use("/gallery",galleryRoute);
-app.use("/contact", contactRoute);
+app.use("/stories", storiesRoute);
 app.use("/admin", adminRoute);
 app.use("/students", studentRoute);
 app.use("/login", (req, res)=>{

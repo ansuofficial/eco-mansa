@@ -1,25 +1,26 @@
 [
   {
     "id": 1,
-    "fullname": "Ansumana Badjie",
-    "email": "ansu123@gmial.coding.io",
-    "matNo": 33338888,
-    "amount": 1000,
-    "lastPayment": "2024-01-01",
-    "status": "completed"
-  },
-  {
-    "id": 1,
-    "fullname": "Muhammad Jammeh",
-    "email": "muahmmad123@coding.io",
-    "matNo": 33338888,
-    "amount": 1000,
-    "lastPayment": "2024-01-01",
-    "status": "completed"
+    "fullname" : "Muhammad Jammeh",
+    "matNo" : 22114152, 
+    "contact": 3427541,
+    "major" : "Economics", 
+    "amount" : 1000, 
+    "date" : "2024-01-01", 
+    "gender" : "Male",
+    "intake" : "Year 1 Second Semester", 
+    "status" : "Fully Paid"
   },
   {
     "id": 2,
-    "firstname": "Musa Jammeh",
-    "lastname": "Musa Jammeh"
+    "fullname" : "Muhammad Jallow",
+    "matNo" : 22115167, 
+    "contact": 3481333,
+    "major" : "Accounting", 
+    "amount" : 1000, 
+    "date" : "2024-01-01", 
+    "gender" : "Male",
+    "intake" : "Year 2 First Semester", 
+    "status" : "Fully Paid"
   }
 ]
