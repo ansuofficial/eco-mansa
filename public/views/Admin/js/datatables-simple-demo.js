@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
         try {
             const data = await getStudentData("/students");
             document.getElementById('numStudents').textContent = await getNumStudents(data)
-            document.getElementById('amountGenerated').textContent = await getTotalAmount(data)
+            document.getElementById('amountGenerated').textContent = `D${await getTotalAmount(data)}`
             if (!Array.isArray(data) || data.length === 0) {
                 console.error("Error: Invalid or empty data received.");
                 return;
@@ -75,7 +75,15 @@ async function getStudentData(url) {
 }
 
 async function getNumStudents (data){
-    return data.length 
+    if (data.length > 0 && data.length < 1000) {
+        return `${data.length}`;
+    }else if (data.length > 1000 && data.length < 100000){
+        return `${data.length/1000}k`;
+    }else if (data.length > 100000 && data.length < 1000000){
+        return `${data.length/1000000}m`;
+    }else if (data.length > 1000000 && data.length < 1000000000){
+        return `${data.length/1000000}b`;
+    }
 }
 async function getTotalAmount (data){
     let total_amount=0;
@@ -83,7 +91,15 @@ async function getTotalAmount (data){
         total_amount+=element.amount
         
     })
-    return total_amount
+    if (total_amount > 0 && total_amount < 1000) {
+        return `${total_amount}`;
+    }else if (total_amount > 1000 && total_amount < 100000){
+        return `${total_amount/1000}k`;
+    }else if (total_amount > 100000 && total_amount < 1000000){
+        return `${total_amount/1000000}m`;
+    }else if (total_amount > 1000000 && total_amount < 1000000000){
+        return `${total_amount/1000000}b`;
+    }
 }
 async function getTotalOwings (){
 
