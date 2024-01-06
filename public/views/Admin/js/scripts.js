@@ -27,7 +27,7 @@ const toggleController = () => {
 };
 toggleController();
 
-async function newStudent() {
+async function newStudent(event) {
   const fullname = document.getElementById('name').value;
   const matNo = document.getElementById('matNo').value;
   const contact = document.getElementById('contact').value;
@@ -46,7 +46,7 @@ async function newStudent() {
       });
     
       if (response.ok) {
-        console.log("Success");
+       
       } else {
         // Display error message
         console.log("Error");
