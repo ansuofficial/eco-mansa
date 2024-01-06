@@ -26,7 +26,6 @@
 
 .to-fill-form {
   display: none;
-  /* background: deepskyblue; */
   color: black;
 }
 
@@ -34,19 +33,23 @@
 
 .inputs-con {
   align-items: center;
-  box-shadow: 2px 2px 5px  rgb(57, 57, 59);
+  box-shadow: 1px 1px 1px  slategrey;
   border-radius: 25px;
   max-width: 700px;
   margin: 0 auto;
   display: none;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   gap: 0 2rem;
-  /* height: 70vh; */
+  height: 100vh;
   justify-content: center;
   padding: 1.5rem 0;
 }
+
+.inputs-con:hover {
+  box-shadow: 2px 2px 4px #0d6efd;
+} 
 
 .inputs-con label {
   display: block;
@@ -63,7 +66,7 @@
 
 .inputs-con input {
   border-radius: 10px;
-  /* border: 1px black; */
+  border: 1px solid slategrey;
   outline: none;
   margin-bottom: 2rem;
   padding: .5rem .75rem;
@@ -71,7 +74,7 @@
 
 .action-con {
   width: 100%;
-  margin-top: -3.5rem;
+  margin-top: -4.5rem;
   padding: 1rem;
 }
 

@@ -20,12 +20,15 @@ const cancel = document.querySelector(".cancel");
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 const matNumber = document.querySelector("#mat-number");
-const email = document.querySelector("#email");
+const phone = document.querySelector("#phone");
 const create = document.querySelector("#create");
 const select = document.querySelector("#select");
-const address = document.querySelector("#address");
+const major = document.querySelector("#address");
 const date = document.querySelector("#date");
 const tbody = document.querySelector("#tbody");
+const male = document.querySelector("#male");
+console.log(male.value)
+
 
 console.log(select.value);
 
