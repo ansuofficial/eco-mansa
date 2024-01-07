@@ -1,6 +1,20 @@
+.gender-container {
+    display: flex;
+    gap: 2rem ;
+}
+
+select  {
+    padding: .5rem 2rem;
+}
+
+.intake select {
+    margin-bottom: 2rem;
+}
+
 .progress-box-con {
     display: flex;
 }
+
 .progress-box-con > div {
     background: #0d6efd;
     border-radius: 5px;
@@ -24,3 +38,4 @@
 .actions input {
     padding: .5rem 1rem;
 }
+
