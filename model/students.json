@@ -1,38 +1,38 @@
 [
   {
     "id": 1,
-    "fullname" : "Muhammad Jammeh",
-    "matNo" : 22114152, 
+    "fullname": "Muhammad Jammeh",
+    "matNo": 22114152,
     "contact": 3427541,
-    "major" : "Economics", 
-    "amount" : 1000, 
-    "date" : "2024-01-01", 
-    "gender" : "Male",
-    "intake" : "Year 1 Second Semester", 
-    "status" : "Fully Paid"
+    "major": "Economics",
+    "amount": 1000,
+    "date": "2024-01-01",
+    "gender": "Male",
+    "intake": "Year 1 Second Semester",
+    "status": "Fully Paid"
   },
   {
     "id": 2,
-    "fullname" : "Muhammad Jallow",
-    "matNo" : 22115167, 
+    "fullname": "Muhammad Jallow",
+    "matNo": 22115167,
     "contact": 3481333,
-    "major" : "Accounting", 
-    "amount" : 1000, 
-    "date" : "2024-01-01", 
-    "gender" : "Male",
-    "intake" : "Year 2 First Semester", 
-    "status" : "Fully Paid"
+    "major": "Accounting",
+    "amount": 1000,
+    "date": "2024-01-01",
+    "gender": "Male",
+    "intake": "Year 2 First Semester",
+    "status": "Fully Paid"
   },
   {
     "id": 3,
-    "fullname" : "Ansu Badjie",
-    "matNo" : 3111, 
+    "fullname": "Ansu Badjie",
+    "matNo": 3111,
     "contact": 3338111,
-    "major" : "Developer", 
-    "amount" : 5000, 
-    "date" : "2024-01-01", 
-    "gender" : "Male",
-    "intake" : "Year 3 First Semester", 
-    "status" : "Fully Paid"
+    "major": "Developer",
+    "amount": 5000,
+    "date": "2024-01-01",
+    "gender": "Male",
+    "intake": "Year 3 First Semester",
+    "status": "Fully Paid"
   }
 ]

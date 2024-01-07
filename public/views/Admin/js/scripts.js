@@ -17,20 +17,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 const toFill = document.querySelector(".to-fill-form");
 const newUser = document.querySelector(".new-user");
 const cancel = document.querySelector(".cancel");
-const firstName = document.querySelector("#first-name");
-const lastName = document.querySelector("#last-name");
-const matNumber = document.querySelector("#mat-number");
-const phone = document.querySelector("#phone");
-const create = document.querySelector("#create");
-const select = document.querySelector("#select");
-const major = document.querySelector("#address");
-const date = document.querySelector("#date");
-const tbody = document.querySelector("#tbody");
-const male = document.querySelector("#male");
-console.log(male.value)
 
-
-console.log(select.value);
 
 const toggleController = () => {
   newUser.addEventListener("click", () =>
@@ -39,58 +26,31 @@ const toggleController = () => {
   cancel.addEventListener("click", () => toFill.classList.add("to-fill-form"));
 };
 toggleController();
-// Initialize user array
-let user = [];
 
-const valueHandler = () => {
-  create.addEventListener("click", () => {
-    // Retrieve existing data from local storage
-    let storedData = JSON.parse(localStorage.getItem("user-copy")) || [];
-
-        console.log(user)
-    })
-}
-    valueHandler()
-
-
-    // Add to students
-      const submitButton = document.getElementById('submitButton');
-      const myForm = document.getElementById('myForm');
-
-      if (submitButton && myForm) {
-          submitButton.addEventListener('click', async () => {
-              try {
-                  const formData = new FormData(myForm);
-                  const formDataObject = {};
-                  formData.forEach((value, key) => {
-                      formDataObject[key] = value;
-                  });
-
-                  await submitDataToApi('/your-api-endpoint', formDataObject);
-              } catch (error) {
-                  console.error('Error submitting data:', error);
-              }
-          });
+async function newStudent(event) {
+  const fullname = document.getElementById('name').value;
+  const matNo = document.getElementById('matNo').value;
+  const contact = document.getElementById('contact').value;
+  const major = document.getElementById('major').value;
+  const amount = document.getElementById('amount').value;
+  const date = document.getElementById('date').value;
+  const gender = document.getElementById('gender').value;
+  const intake = document.getElementById('intake').value;
+    
+      const response = await fetch('/students', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ fullname, matNo, contact, major, amount, date, gender, intake }),
+      });
+    
+      if (response.ok) {
+       
+      } else {
+        // Display error message
+        console.log("Error");
       }
-
-
-  async function submitDataToApi(apiEndpoint, data) {
-      try {
-          const response = await fetch(apiEndpoint, {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(data),
-          });
-
-          if (!response.ok) {
-              throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-
-          const responseData = await response.json();
-          console.log('Data submitted successfully:', responseData);
-      } catch (error) {
-          throw new Error(`Error submitting data: ${error.message}`);
-      }
-  }
+    }
+    
+    
