@@ -1,0 +1,106 @@
+.sct {
+    display: flex;
+    height: 600px;
+    align-items: center;justify-content: center; 
+}
+
+.sct span  {
+    color: #5489f0;
+}
+
+.main-s {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 8rem;
+}
+
+.story-bonner {
+    margin-bottom: 2rem;
+}
+
+.sd {
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: #eea412;
+    display: flex;
+    justify-content: center;
+}
+
+.sd h5 {
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.s-title {
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.stroy-abc {
+    background: rgb(177, 177, 177);
+    padding: 2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.stroy-abc span {
+    color: #eea412;
+    font-size: 26px;
+}
+
+.story-comments-wrapper {
+    padding: 2rem 0;
+}
+
+.c-title {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.story-comments-con > div img {
+    border-radius: 50%;
+    width: 100px;
+    gap: 2rem;
+}
+
+.comments-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comments-text h4 {
+    font-weight: bold;
+}
+
+.stroy-comment {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 1.5rem   
+}
+
+.l-post-img {
+    display: flex;
+    flex-direction: column;
+}
+
+.l-post-img img {
+    margin-bottom: 2rem;
+    width: 250px;
+}
+
+.story-tag {
+    display: flex;
+    gap: 2rem;
+}
+
+.story-tag > div {
+    background: #eea412;
+    padding: 5%;
+    font-weight: bold;
+}
