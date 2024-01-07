@@ -97,70 +97,142 @@
                     </div>
 
                     <div class="to-fill">
+              <div>
+                <form class="to-fill-form">
+                  <div>
+                    <div class="ic">
+                      <div class="inputs-con">
                         <div>
-                            <form class="to-fill-form" id="myForm" onsubmit="newStudent(event)">
-                                <div>
-                                    <div class="ic">
-                                        <div class="inputs-con">
-                                            <div>
-                                                <div>
-                                                    <input required id="name" type="text" placeholder="Name" />
-                                                </div>
-                                                <div>
-                                                    <input required id="matNo" type="text" placeholder="Mat Number" />
-                                                </div>
-                                                <div>
-                                                    <input required id="contact" type="text" placeholder="Mobile" />
-                                                </div>
-                                                <div>
-                                                    <input required id="major" type="text" placeholder="Major" />
-                                                </div>
-                                                <div>
-                                                    <input required id="amount" type="text" placeholder="Amount" />
-                                                </div>
-                                            </div>
-                                            <div class="inputs-con0">
-                                                <div>
-                                                    <div>
-                                                        <input required id="date" type="date" placeholder="date" />
-                                                    </div>
-                                                    <div>
-                                                        <select id="gender" class="tf-sel">
-                                                            <option value="Male">Male</option>
-                                                            <option value="Female">Female</option>
-                                                        </select>
-                                                    </div>
-                                                    <div>
-                                                        <select id="intake" class="tf-sel">
-                                                          <option value="Year One First Semester">Year One First Semester</option>
-                                                          <option value="Year One Second Semester">Year One Second Semester</option>
-                                                          <option value="Year Two First Semester">Year Two First Semester</option>
-                                                          <option value="Year Two Second Semester">Year Two Second Semester</option>
-                                                          <option value="Year Three First Semester">Year Three First Semester</option>
-                                                          <option value="Year Three Second Semester">Year Three Second Semester</option>
-                                                          <option value="Year Four First Semester">Year Four First Semester</option>
-                                                          <option value="Year Four Second Semester">Year Four Second Semester</option>
-                                                          <option value="An Additional Semester">An Additional Semester</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="action-con">
-                                            <div class="actions">
-                                                <div>
-                                                    <button type="submit">Submit</button>
-                                                </div>
-                                                <div>
-                                                    <button class="cancel" type="button">Cancel</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                          <div>
+                            <label for="First name">Full name</label>
+                            <input
+                              required
+                              id="first-name"
+                              type="text"
+                              placeholder="full name"
+                            />
+                          </div>
+                          <div>
+                            <label for="Mat-number">Mat-number</label>
+                            <input
+                              required
+                              id="mat-number"
+                              type="text"
+                              placeholder="mat-number"
+                            />
+                          </div>
+                          <div>
+                            <label for="Last name">Contact</label>
+                            <input
+                              required
+                              id="phone"
+                              type="text"
+                              placeholder="+220 1234567"
+                            />
+                          </div>
+                          <div>
+                            <label for="Last name">Major</label>
+                            <input
+                              required
+                              id="phone"
+                              type="text"
+                              placeholder="major"
+                            />
+                          </div>
+
+                          <div>
+                            <label for="major">Amount</label>
+                            <input
+                              required
+                              id="major"
+                              type="text"
+                              placeholder="Amount"
+                            />
+                          </div>
                         </div>
+                        <div class="inputs-con0">
+                          <div>
+                            <label for="Last name">Date</label>
+                            <input
+                              required
+                              id="date"
+                              type="date"
+                              placeholder="date"
+                            />
+                          </div>
+
+                          <div>
+                            <div>
+                              <label for="major">Amount</label>
+                              <input
+                                required
+                                id="major"
+                                type="text"
+                                placeholder="Amount"
+                              />
+                            </div>
+
+                            <div class="gender-wrapper">
+                              <label>Gender</label>
+                              <div class="gender-container">
+                                <div>
+                                <input type="radio" name="btn" id="male" value="Male">
+                                Male
+                              </div>
+                              <div>
+                                <input type="radio" name="btn" id="female" value="Female">
+                                Female
+                              </div>
+                              </div>
+                            </div>
+                            <div class="intake">
+                              <label>Intake</label>
+                              <select name="select" id="intake">
+                                <option value="Pending">Year 1 First Semester</option>
+                                <option value="Completed">Year 1 Second Semester</option>
+                                <option value="Not paid">Year 1 Third Semester</option>
+                                <option value="Pending">Year 2 First Semester</option>
+                                <option value="Completed">Year 2 Second Semester</option>
+                                <option value="Not paid">Year 2 Third Semester</option>
+                                <option value="Pending">Year 3 First Semester</option>
+                                <option value="Completed">Year 3 Second Semester</option>
+                                <option value="Not paid">Year 3 Third Semester</option>
+                                <option value="Pending">Year 4 First Semester</option>
+                                <option value="Completed">Year 4 Second Semester</option>
+                                <option value="Not paid">Year 4 Third Semester</option>
+                              </select>
+                            </div>
+                            <div>
+                              <label>Status</label>
+                              <select name="select" id="select" class="tf-sel">
+                                <option value="Pending">Pending</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Not paid">Not paid</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="action-con">
+                        <div class="actions">
+                          <div>
+                            <input id="create" type="submit" value="Create" />
+                          </div>
+                          <div>
+                            <input
+                              class="cancel"
+                              type="button"
+                              value="Cancel"
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                </form>
+              </div>
+            </div>
 
                     <ol class="breadcrumb mb-4 rad">
                         <li class="breadcrumb-item active">Dashboard</li>
