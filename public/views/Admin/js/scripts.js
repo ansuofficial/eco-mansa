@@ -54,3 +54,44 @@ async function newStudent() {
     }
     
     
+    //Chart
+  const barCtx = document.getElementById('bar');
+  const doughnutCtx = document.getElementById('pie').getContext("2d");
+
+  new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: ['BPA', 'Finance', 'Management', 'Economics'],
+      datasets: [{
+        label: 'Schools',
+        data: [12, 19, 3, 5],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  new Chart(doughnutCtx, {
+    type: 'doughnut',
+    data: {
+      labels: ["Male", "Female"],
+      datasets: [{
+        label: 'Gender',
+        data: [ 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
