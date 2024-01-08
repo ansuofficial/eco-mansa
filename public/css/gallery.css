@@ -1,5 +1,6 @@
 .gallery-container {
     padding: 2rem;
+    background: linear-gradient(90deg, aliceblue, rgb(118, 118, 122));
 }
 
 .gallery-title {
