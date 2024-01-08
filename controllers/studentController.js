@@ -59,7 +59,7 @@ const createNewStudent = async (req, res) => {
             date: req.body.date,
             gender: req.body.gender,
             intake: req.body.intake,
-            status: "Fully Paid"
+            status: req.body.status
         };
 
         if (!newStudent.fullname || !newStudent.matNo || !newStudent.contact || !newStudent.major || !newStudent.amount || !newStudent.date || !newStudent.gender || !newStudent.intake) {

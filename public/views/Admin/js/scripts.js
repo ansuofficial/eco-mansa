@@ -27,7 +27,7 @@ const toggleController = () => {
 };
 toggleController();
 
-async function newStudent(event) {
+async function newStudent() {
   const fullname = document.getElementById('name').value;
   const matNo = document.getElementById('matNo').value;
   const contact = document.getElementById('contact').value;

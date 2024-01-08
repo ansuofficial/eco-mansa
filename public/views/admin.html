@@ -92,59 +92,59 @@
                     <div class="table-title-con">
                         <h1 class="mt-4">Dashboard</h1>
                         <div class="new-user">
-                            <i class="fas fa-user"></i>&nbsp; Add new user
+                            <i class="fas fa-user"></i>&nbsp; Add new student
                         </div>
                     </div>
 
                     <div class="to-fill">
               <div>
-                <form class="to-fill-form">
+                <form class="to-fill-form" onsubmit="newStudent()">
                   <div>
                     <div class="ic">
                       <div class="inputs-con">
                         <div>
                           <div>
-                            <label for="First name">Full name</label>
+                            <label for="name">Full name</label>
                             <input
                               required
-                              id="first-name"
+                              id="name"
                               type="text"
-                              placeholder="full name"
+                              placeholder="Full name"
                             />
                           </div>
                           <div>
-                            <label for="Mat-number">Mat-number</label>
+                            <label for="matNo">Mat-number</label>
                             <input
                               required
-                              id="mat-number"
+                              id="matNo"
                               type="text"
-                              placeholder="mat-number"
+                              placeholder="Mat Number"
                             />
                           </div>
                           <div>
-                            <label for="Last name">Contact</label>
+                            <label for="contact">Contact</label>
                             <input
                               required
-                              id="phone"
+                              id="contact"
                               type="text"
                               placeholder="+220 1234567"
                             />
                           </div>
                           <div>
-                            <label for="Last name">Major</label>
+                            <label for="major">Major</label>
                             <input
                               required
-                              id="phone"
+                              id="major"
                               type="text"
-                              placeholder="major"
+                              placeholder="Major"
                             />
                           </div>
 
                           <div>
-                            <label for="major">Amount</label>
+                            <label for="amount">Amount</label>
                             <input
                               required
-                              id="major"
+                              id="amount"
                               type="text"
                               placeholder="Amount"
                             />
@@ -152,17 +152,17 @@
                         </div>
                         <div class="inputs-con0">
                           <div>
-                            <label for="Last name">Date</label>
+                            <label for="date">Date</label>
                             <input
                               required
                               id="date"
                               type="date"
-                              placeholder="date"
+                              placeholder="Date"
                             />
                           </div>
 
                           <div>
-                            <div>
+                            <!-- <div>
                               <label for="major">Amount</label>
                               <input
                                 required
@@ -170,44 +170,39 @@
                                 type="text"
                                 placeholder="Amount"
                               />
-                            </div>
+                            </div> -->
 
                             <div class="gender-wrapper">
                               <label>Gender</label>
                               <div class="gender-container">
                                 <div>
-                                <input type="radio" name="btn" id="male" value="Male">
-                                Male
-                              </div>
-                              <div>
-                                <input type="radio" name="btn" id="female" value="Female">
-                                Female
+                                <select id="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                              </select>
                               </div>
                               </div>
                             </div>
                             <div class="intake">
                               <label>Intake</label>
-                              <select name="select" id="intake">
-                                <option value="Pending">Year 1 First Semester</option>
-                                <option value="Completed">Year 1 Second Semester</option>
-                                <option value="Not paid">Year 1 Third Semester</option>
-                                <option value="Pending">Year 2 First Semester</option>
-                                <option value="Completed">Year 2 Second Semester</option>
-                                <option value="Not paid">Year 2 Third Semester</option>
-                                <option value="Pending">Year 3 First Semester</option>
-                                <option value="Completed">Year 3 Second Semester</option>
-                                <option value="Not paid">Year 3 Third Semester</option>
-                                <option value="Pending">Year 4 First Semester</option>
-                                <option value="Completed">Year 4 Second Semester</option>
-                                <option value="Not paid">Year 4 Third Semester</option>
+                              <select id="intake">
+                                <option value="Year 1 First Semester">Year 1 First Semester</option>
+                                <option value="Year 1 Second Semester">Year 1 Second Semester</option>
+                                <option value="Year 2 First Semester">Year 2 First Semester</option>
+                                <option value="Year 2 Second Semester">Year 2 Second Semester</option>
+\                               <option value="Year 3 First Semester">Year 3 First Semester</option>
+                                <option value="Year 3 Second Semester">Year 3 Second Semester</option>
+                                <option value="Year 4 First Semester">Year 4 First Semester</option>
+                                <option value="Year 4 Second Semester">Year 4 Second Semester</option>
+                                <option value="Additional Semesters">Additional Semesters</option>
                               </select>
                             </div>
                             <div>
                               <label>Status</label>
-                              <select name="select" id="select" class="tf-sel">
+                              <select id="status" class="tf-sel">
+                                <option value="Not paid">Not paid</option>
                                 <option value="Pending">Pending</option>
                                 <option value="Completed">Completed</option>
-                                <option value="Not paid">Not paid</option>
                               </select>
                             </div>
                           </div>
@@ -217,7 +212,7 @@
                       <div class="action-con">
                         <div class="actions">
                           <div>
-                            <input id="create" type="submit" value="Create" />
+                            <input id="create" type="submit" />
                           </div>
                           <div>
                             <input

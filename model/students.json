@@ -9,7 +9,7 @@
     "date": "2024-01-01",
     "gender": "Male",
     "intake": "Year 1 Second Semester",
-    "status": "Fully Paid"
+    "status": "Completed"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "date": "2024-01-01",
     "gender": "Male",
     "intake": "Year 2 First Semester",
-    "status": "Fully Paid"
+    "status": "Completed"
   },
   {
     "id": 3,
@@ -33,6 +33,7 @@
     "date": "2024-01-01",
     "gender": "Male",
     "intake": "Year 3 First Semester",
-    "status": "Fully Paid"
+    "status": "Completed"
   }
+  
 ]
