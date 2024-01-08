@@ -123,14 +123,21 @@
         padding: 2rem;
        }
 
+       .gic {
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid green;
+        gap: 1rem ; 
+       }
+
        .Gallery-container > div {
         padding: .5rem;
-        width: 40%;
        }
 
        .Gallery-container > div img {
+        aspect-ratio: 16/9;
         border-radius: 5px;
-        width: 100%;
+        width: 50%;
        }
 
        .Gallery-container > div img:hover {
@@ -271,7 +278,7 @@
 									<div class="big-tagline">
 										<h2><strong>The Economics and Management Students’ Association </strong> (ECOMANSA)</h2>
 										<p class="lead">Empowering Minds, Enriching Lives: ECOMANSA, Where Academic Excellence Meets Personal Growth<p>
-											<a href="/contact" class="hover-btn-new"><span>Contact Us</span></a>
+											<a href="/stories" class="hover-btn-new"><span>Success stories</span></a>
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 											<a href="/about" class="hover-btn-new"><span>Read More</span></a>
 									</div>
@@ -290,7 +297,7 @@
 									<div class="big-tagline">
 										<h2 data-animation="animated zoomInRight">Ecomansa Is The<strong> Solution</strong></h2>
 										<p class="lead" data-animation="animated fadeInLeft">Empowering Minds, Enriching Lives: ECOMANSA, Where Academic Excellence Meets Personal Growth</p>
-											<a href="/contact" class="hover-btn-new"><span>Contact Us</span></a>
+											<a href="/stories" class="hover-btn-new"><span>Success stories</span></a>
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 											<a href="/about" class="hover-btn-new"><span>Read More</span></a>
 									</div>
@@ -309,7 +316,7 @@
 									<div class="big-tagline">
 										<h2 data-animation="animated zoomInRight"><strong>Ecomansa</strong> the school of exellence</h2>
 										<p class="lead" data-animation="animated fadeInLeft">Empowering Minds, Enriching Lives: ECOMANSA, Where Academic Excellence Meets Personal Growth</p>
-											<a href="/contact" class="hover-btn-new"><span>Contact Us</span></a>
+											<a href="/stories" class="hover-btn-new"><span>Success stories</span></a>
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 											<a href="/about" class="hover-btn-new"><span>Read More</span></a>
 									</div>
@@ -404,23 +411,16 @@
 
     <section class="gallery">
         <h1>Our Gallery</h1>
-        <div class="Gallery-container border" style="display: flex; flex-wrap: wrap; justify-content: center;">
-            <div>
+        <div class="Gallery-container">
+            <div class="gic">
                 <img src="images/25411866467_8d8077fdba_b.jpg" alt="sup">
-            </div>
-             <div>
                 <img src="images/427805-847x440.jpg" alt="">
-            </div>
-             <div>
                 <img src="images/427805-847x440.jpg" alt="">
-            </div>
-             <div>
                 <img src="./images/Whatsa.jpeg" alt="">
             </div>
             <div class="bc">
-                <button><a href="/gallery">Show more</a></button>
-            </div>
-        </div>
+               <button><a href="/gallery">Show more</a></button>
+           </div>
     </section>
 
 
