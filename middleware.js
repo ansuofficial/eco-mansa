@@ -45,9 +45,7 @@ app.use("/login", (req, res)=>{
 
 
 app.all("*", (req,res)=>{
-    res.status(404).send(
-        "<h1> 404, Page not found</h1>"
-    );
+    res.sendFile(path.join(__dirname, "public" ,'views' , "404.html"))
 })
 
 
