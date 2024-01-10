@@ -55,7 +55,7 @@ const createNewStudent = async (req, res) => {
             matNo: req.body.matNo,
             contact: req.body.contact,
             major: req.body.major,
-            amount: `D${parseInt(req.body.amount)}`,
+            amount: parseInt(req.body.amount),
             date: req.body.date,
             gender: req.body.gender,
             intake: req.body.intake,

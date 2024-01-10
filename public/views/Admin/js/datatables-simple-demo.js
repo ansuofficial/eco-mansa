@@ -14,11 +14,12 @@ window.addEventListener('DOMContentLoaded', async (event) => {
             const data = await getStudentData("/students");
             document.getElementById('numStudents').textContent = await getNumStudents(data)
             document.getElementById('amountGenerated').textContent = `D${await getTotalAmount(data)}`
+           
             if (!Array.isArray(data) || data.length === 0) {
                 console.error("Error: Invalid or empty data received.");
                 return;
             }
-
+            
             // Clear existing content
             datatablesSimple.querySelector('tbody').innerHTML = '';
 
@@ -42,6 +43,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
             // Initialize DataTable
             dataTableInstance = new simpleDatatables.DataTable(datatablesSimple);
+
         } catch (error) {
             console.error("Error:", error);
         }
@@ -49,11 +51,13 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
     // Initial population
     populateTable();
-
+    
     // Add event listener to refresh the table when needed
     document.getElementById('refreshButton').addEventListener('click', populateTable);
-
+    
 });
+
+
 
 // Function to fetch student data from an API
 async function getStudentData(url) {
@@ -101,6 +105,105 @@ async function getTotalAmount (data){
         return `${total_amount/1000000}b`;
     }
 }
-async function getTotalOwings (){
 
+async function getGenderData (){
+    const data = await getStudentData("/students");
+
+    // Calculate data for doughnut chart (gender)
+     const genderData = {
+        male: data.filter(student => student.gender === 'Male').length,
+        female: data.filter(student => student.gender === 'Female').length
+    };
+   
+    return  genderData
 }
+async function getMajorData (){
+    const data = await getStudentData("/students");
+    majorsData = {};
+    data.forEach(student => {
+        majorsData[student.major] = (majorsData[student.major] || 0) + 1;
+    });
+   return majorsData;
+}
+
+async function createBarCharts(dataNeeded){
+    const barCtx = document.getElementById('bar');
+    
+    new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: ['BPA', 'Finance', 'Management', 'Economics'],
+      datasets: [{
+          label: 'Schools',
+          backgroundColor: "#ffffff",
+          
+          data: [21,15,19,18],
+          borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+        y: {
+        beginAtZero: true,
+        ticks: {
+            color: 'white' // set y-axis label color to white
+        }
+    },
+      x: {
+          ticks: {
+              color: 'white' // set x-axis label color to white
+            }
+        }
+      },plugins: {
+          legend: {
+          labels: {
+            color: 'white' // set legend label color to white
+          }
+        }
+      }
+    }
+});
+}
+async function createDoughnutCharts(dataNeeded){
+    const doughnutCtx = document.getElementById('pie');
+       
+    
+    new Chart(doughnutCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ["Male", "Female"],
+          datasets: [{
+            label: 'Gender',
+            data: [3, 0],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+             y: {
+            beginAtZero: true,
+            ticks: {
+              color: 'white' // set y-axis label color to white
+            }
+          },
+          x: {
+            ticks: {
+              color: 'white' // set x-axis label color to white
+            }
+          }
+          },plugins: {
+            legend: {
+              labels: {
+                color: 'white' // set legend label color to white
+              }
+            }
+          }
+        }
+      });
+}
+
+createBarCharts()
+createDoughnutCharts()
+
+
+

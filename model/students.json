@@ -34,6 +34,17 @@
     "gender": "Male",
     "intake": "Year 3 First Semester",
     "status": "Completed"
+  },
+  {
+    "id": 4,
+    "fullname": "Ebrima Konteh",
+    "matNo": "22334562",
+    "contact": "3456789",
+    "major": "Graphic Design",
+    "amount": 10000,
+    "date": "2024-01-09",
+    "gender": "Male",
+    "intake": "Year 4 First Semester",
+    "status": "Completed"
   }
-  
 ]

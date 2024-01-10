@@ -1,0 +1,12 @@
+const data = await getStudentData("/students");
+
+        // Calculate data for doughnut chart (gender)
+        const genderData = {
+            male: data.filter(student => student.gender === 'Male').length,
+            female: data.filter(student => student.gender === 'Female').length
+        };
+
+         const majorsData = {};
+        data.forEach(student => {
+            majorsData[student.major] = (majorsData[student.major] || 0) + 1;
+        });

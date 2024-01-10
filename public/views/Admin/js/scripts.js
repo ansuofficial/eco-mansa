@@ -36,13 +36,14 @@ async function newStudent() {
   const date = document.getElementById('date').value;
   const gender = document.getElementById('gender').value;
   const intake = document.getElementById('intake').value;
+  const status = document.getElementById('status').value;
     
       const response = await fetch('/students', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ fullname, matNo, contact, major, amount, date, gender, intake }),
+        body: JSON.stringify({ fullname, matNo, contact, major, amount, date, gender, intake ,status}),
       });
     
       if (response.ok) {
@@ -55,43 +56,4 @@ async function newStudent() {
     
     
     //Chart
-  const barCtx = document.getElementById('bar');
-  const doughnutCtx = document.getElementById('pie').getContext("2d");
-
-  new Chart(barCtx, {
-    type: 'bar',
-    data: {
-      labels: ['BPA', 'Finance', 'Management', 'Economics'],
-      datasets: [{
-        label: 'Schools',
-        data: [12, 19, 3, 5],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-
-  new Chart(doughnutCtx, {
-    type: 'doughnut',
-    data: {
-      labels: ["Male", "Female"],
-      datasets: [{
-        label: 'Gender',
-        data: [ 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
+  
