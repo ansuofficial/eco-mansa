@@ -46,5 +46,17 @@
     "gender": "Male",
     "intake": "Year 4 First Semester",
     "status": "Completed"
+  },
+  {
+    "id": 5,
+    "fullname": "Momodou Lamin Jagne",
+    "matNo": "22334565",
+    "contact": "3456789",
+    "major": "Information Technology",
+    "amount": 2000,
+    "date": "2024-01-11",
+    "gender": "Male",
+    "intake": "Year 4 Second Semester",
+    "status": "Completed"
   }
 ]
